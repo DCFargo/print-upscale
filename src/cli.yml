@@ -1,0 +1,38 @@
+name: print-upscale
+version: "0.1.0"
+author: Andrew Fargo <drew.fargo@gmail.com>
+about: Upscales images for usage of printing and stitching together.
+args:
+    - verbose:
+        help: Performs with verbosity
+        short: v
+        long: verbose
+    - INPUT:
+        help: Sets desired input file
+        required: true
+        index: 1
+    - OUTPUT:
+        help: Sets desired output NAME; stdout if ''
+        required: true
+        index: 2
+        empty_values: true
+    - dimensions:
+        short: d
+        long: dimensions
+        help: Sets dimensions of paper.
+        require_delimiter: true
+        value_names: [WIDTH, HEIGHT]
+        default_value: 8.5,11
+    - overlap:
+        short: o
+        long: overlap 
+        help: Sets overlap percentage.
+        value_name: PERCENT 
+        default_value: "10"
+    - type:
+        short: t
+        long: type
+        help: Specifies file type of output
+        value_name: TYPE
+        possible_values: [pdf, jpg, png]
+        default_value: pdf
