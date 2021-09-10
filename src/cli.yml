@@ -36,3 +36,7 @@ args:
         value_name: TYPE
         possible_values: [pdf, jpg, png]
         default_value: pdf
+    - alignment:
+        short: a
+        long: alignment
+        help: Puts alignment crosses 
